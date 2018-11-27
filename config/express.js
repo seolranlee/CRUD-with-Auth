@@ -5,7 +5,7 @@ module.exports = function () {
     var bodyParser = require('body-parser');
 
     var app = express();
-    app.set('views', './views/mysql');
+    app.set('views', './views');
     app.set('view engine', 'pug');
     var options = {
         host: 'localhost',

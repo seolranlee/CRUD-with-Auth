@@ -1,6 +1,6 @@
 module.exports = function () {
     var route = require('express').Router();
-    var conn = require('../../config/mysql/db')();
+    var conn = require('../config/db')();
     route.get('/add', function(req, res){
         var sql = 'SELECT id, title FROM topic';
         conn.query(sql, function(err, topics, fields){
