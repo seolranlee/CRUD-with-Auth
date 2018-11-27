@@ -1,0 +1,19 @@
+extends ../layout
+block content
+    article
+        if topic
+            h2= topic.title
+            p= topic.description
+            p= 'by '+topic.author
+        else
+            h2 Welcome
+            p This is sever side javascript tutorial.
+    ul
+        if user
+            li
+                a(href='/topic/add') add
+        if topic && user
+            li
+                a(href='/topic/'+topic.id+'/edit') edit
+            li
+                a(href='/topic/' + topic.id + '/delete') delete

@@ -1,0 +1,22 @@
+doctype html
+html
+    head
+        meta(charest='utf-8')
+    body
+        ul#account
+            if user
+                li
+                    p= user.displayName+'님 환영합니다.'
+                    a(href='/auth/logout') Logout
+            else
+                li
+                    a(href='/auth/register') Register
+                li
+                    a(href='/auth/login') Login
+        h1
+            a(href='/topic') Server Side JavaScript
+        ul
+            each item in topics
+                li
+                    a(href='/topic/'+item.id)= item.title
+        block content
