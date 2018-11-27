@@ -48,7 +48,7 @@ module.exports = function (passport) {
                 } else{
                     req.login(user, function (err) {
                         req.session.save(function () {
-                            res.redirect('/welcome');
+                            res.redirect('/topic');
                         });
                     });
                 }
