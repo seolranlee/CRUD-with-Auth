@@ -36,7 +36,6 @@ module.exports = function (app) {
 
             var sql = 'SELECT * FROM users WHERE authId=?';
             conn.query(sql, ['local:'+username], function (err, results) {
-                // console.log(results);
                 if(err){
                     return done('There is no user');
                 }
@@ -62,7 +61,7 @@ module.exports = function (app) {
             profileFields: ['id', 'email', 'gender', 'link', 'locale', 'name', 'timezone', 'updated_time', 'verified', 'displayName']  // profile에 들어올 정보들을 명시적으로 표시할 수 있다.
         },
         function(accessToken, refreshToken, profile, done) {    // profile 정보가 가장 중요.
-            console.log(profile);
+            // console.log(profile);
             var authId = 'facebook:'+profile.id;
             var sql = 'SELECT * FROM users WHERE authId=?';
             conn.query(sql, [authId], function (err, results) {
