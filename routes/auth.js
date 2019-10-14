@@ -36,6 +36,7 @@ module.exports = function (passport) {
             var user = {
                 authId: 'local:'+req.body.username,
                 username: req.body.username,
+                email: req.body.email,
                 password: hash,
                 salt: salt,
                 displayName: req.body.displayName
