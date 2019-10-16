@@ -36,7 +36,7 @@ module.exports = function (app) {
 
             var sql = 'SELECT * FROM users WHERE authId=?';
             conn.query(sql, ['local:'+username], function (err, results) {
-                if(err){
+                if(err || results.length === 0){
                     return done('There is no user');
                 }
                 var user = results[0];
