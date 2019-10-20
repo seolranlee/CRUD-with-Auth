@@ -2,8 +2,9 @@ doctype html
 html
     head
         meta(charest='utf-8')
+        title Server Side JavaScript
         style
-            include style.css
+            include css/style.css
     body
         div#root
             div#app
@@ -22,9 +23,10 @@ html
                                 a(href='/auth/register') Register
                             li
                                 a(href='/auth/login') Login
-                div.todo-app
+                nav#side-nav
                     ul
                         each item in topics
-                            li
+                            li(class=(route == item.id ? "active" : undefined))
                                 a(href='/topic/' + item.id)= item.title
+                main
                     block content

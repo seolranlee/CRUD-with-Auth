@@ -1,0 +1,174 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+
+/* reset:Start */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+fieldset,img{border:0 none}
+dl,ul,ol,menu,li{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+input,select,textarea,button{vertical-align:middle}
+input:focus,button:focus,textarea:focus{outline:none;}
+button{border:0 none;background-color:transparent;cursor:pointer}
+body{background:#fff;-webkit-text-size-adjust:none;}
+a{color:#222;text-decoration:none}
+a:active,a:hover{text-decoration:none;}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:400}
+.clear{clear:both}
+figure{line-height:0}
+table caption{display:none !important;}
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.blind,legend{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+/* reset:End */
+
+#root{
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	-moz-osx-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	color: #212121;
+}
+nav#account{
+	position: fixed;
+	left: 0;right: 0;
+	z-index: 10;
+	display: flex;
+	flex-direction: row;
+	height: 72px;
+	padding: 0 50px;
+	background-color: #212121;
+	box-shadow: 0 2px 4px rgba(0,0,0,.5);
+}
+nav#account *{
+	color: #fff;
+	line-height: 72px;
+}
+nav#account h1{
+	margin-right: auto;
+}
+nav#account ul{
+	display: flex;
+}
+
+nav#account ul li{
+	padding: 0 12px;
+}
+
+nav#side-nav{
+	position: fixed;
+	top: 0;bottom: 0;
+	font-size: 14px;
+	padding: 72px 0 40px;
+	width: 280px;
+	overflow-y: auto;
+	transition: transform .15s cubic-bezier(.4,0,.2,1);
+	background: #fff;
+	border-right: 1px solid rgba(0,0,0,.12);
+}
+nav#side-nav ul{
+	padding: 40px 0 0 0;
+}
+
+nav#side-nav ul li{
+}
+
+nav#side-nav ul li a{
+	display: block;
+	padding: 12px 0 12px 24px;
+	color: #616161;
+}
+
+nav#side-nav ul li a:hover{
+	color: #000;
+	background-color: #efefef;
+}
+
+nav#side-nav ul li.active a{
+	color: #000;
+}
+
+
+main{
+	padding: 72px 72px 72px 320px;
+}
+main article{
+	padding-top: 72px;
+	max-width: 70%;
+}
+
+main article .content{}
+main article .content .title{
+	font-size: 60px;
+	font-weight: 400;
+	margin: 0 0 16px;
+}
+
+main article .content .desc, main article .content .author{
+	font-size 20px;
+	line-height: 1.6;
+	color: #616161;
+}
+
+main article .setting{
+	display: flex;
+	margin-top: 50px;
+}
+
+main article .setting li{
+	margin: 0 5px;
+}
+
+main article .setting li a{
+	display: inline-block;
+	font-size: 1rem;
+	padding: .5rem 1rem;
+	border: 1px solid rgba(98,0, 238, 1);
+	color: rgba(98,0, 238, 1);
+	border-radius: .25rem;
+	transition: all 0.2s ease-out;
+	/*box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);*/
+}
+
+main article .setting li a:hover{
+	background-color: rgba(98,0, 238, 0.1);
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+form p{
+	margin-top: 15px;
+}
+form p input{
+	outline: 0;
+	border: 0;
+	border-bottom: 1px solid #000;
+	height: 50px;
+	width: 100%;
+	font-size: 16px;
+	line-height: 50px;
+}
+
+form p textarea{
+	outline: 0;
+	border: 0;
+	border-bottom: 1px solid #000;
+	width: 100%;
+	min-height: 200px;
+	font-size: 16px;
+}
+
+form p button{
+	font-size: 1rem;
+	padding: .5rem 1rem;
+	background-color: rgba(66,133,244,1);
+	color: #fff;
+	border-radius: .25rem;
+	transition: all 0.2s ease-out;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+form p button:hover{
+	background-color: rgba(66,133,244,0.9);
+	box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+}

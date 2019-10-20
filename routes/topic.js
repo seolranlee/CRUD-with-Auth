@@ -122,12 +122,12 @@ module.exports = function () {
                         res.status(500).send('Internal Server Error');
                     }else{
                         // res.send(rows);
-                        res.render('topic/view',  {topics: topics, topic: topic[0], user: req.user});
+                        res.render('topic/view',  {topics: topics, topic: topic[0], user: req.user, route: req.params.id});
                     }
 
                 })
             }else{
-                res.render('topic/view', {topics: topics, user: req.user});
+                res.render('topic/view', {topics: topics, user: req.user, route: req.params.id});
             }
         });
     });

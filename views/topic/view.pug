@@ -1,21 +1,23 @@
 extends ../layout
+
 block content
     article
-        if topic
-            h2= topic.title
-            p= topic.description
-            p= 'by '+topic.author
-        else
-            h2 Welcome
-            p Material Components are interactive building blocks for creating a user interface.
+        div.content
+            if topic
+                h2.title= topic.title
+                p.desc= topic.description
+                p.author= 'by ' + topic.author
+            else
+                h2.title Welcome
+                p.desc This is server side javascript tutorial.
 
 
-    ul
-        if user
-            li
-                a(href='/topic/add') add
-        if topic && user
-            li
-                a(href='/topic/'+topic.id+'/edit') edit
-            li
-                a(href='/topic/' + topic.id + '/delete') delete
+        ul.setting
+            if user
+                li
+                    a(href='/topic/add') add
+            if topic && user
+                li
+                    a(href='/topic/' + topic.id + '/edit') edit
+                li
+                    a(href='/topic/' + topic.id + '/delete') delete
