@@ -15,9 +15,9 @@ block content
         ul.setting
             if user
                 li
-                    a(href='/topic/add') add
+                    a.button.type2(href='/topic/add') add
             if topic && user
                 li
-                    a(href='/topic/' + topic.id + '/edit') edit
+                    a.button.type2(href='/topic/' + topic.id + '/edit') edit
                 li
-                    a(href='/topic/' + topic.id + '/delete') delete
+                    a.button.type2(href='/topic/' + topic.id + '/delete') delete
