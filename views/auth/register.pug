@@ -1,14 +1,15 @@
 extends ../layout
 block content
-    h1 Register
-    form(action='/auth/register', method='post')
-        p
-            input(type='text', name='username', placeholder='username')
-        p
-            input(type='email', name='email', placeholder='email')
-        p
-            input(type='password', name='password', placeholder='password')
-        p
-            input(type='text', name='displayName', placeholder='displayName')
-        p
-            input(type='submit')
+    div#register
+        h1 Register
+            form(action='/auth/register', method='post')
+                p
+                    input(type='text', name='username', placeholder='username')
+                p
+                    input(type='email', name='email', placeholder='email')
+                p
+                    input(type='password', name='password', placeholder='password')
+                p
+                    input(type='text', name='displayName', placeholder='nick name')
+                div.button-wrap
+                    button.button.type1(type='submit') Submit

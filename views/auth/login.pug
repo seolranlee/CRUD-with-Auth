@@ -1,11 +1,13 @@
 extends ../layout
 block content
-    h1 Login
-    form(action='/auth/login', method='post')
-        p
-            input(type='text', name='username', placeholder='username')
-        p
-            input(type='password', name='password', placeholder='password')
-        p
-            input(type='submit')
-    a(href='/auth/facebook') facebook
+    div#login
+        h1 Login
+            form(action='/auth/login', method='post')
+                p
+                    input(type='text', name='username', placeholder='username')
+                p
+                    input(type='password', name='password', placeholder='password')
+                p
+                    button.button.type1(type='submit') login
+            div.button-wrap
+                a.button.type2(href='/auth/facebook') facebook
