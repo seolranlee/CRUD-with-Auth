@@ -11,7 +11,7 @@ module.exports = function () {
         host: 'localhost',
         port: 3306, // mysql 은 기본이 3306임.
         user: 'root',
-        password: '111111',
+        password: '1111',
         database: 'o2'
     };
 
