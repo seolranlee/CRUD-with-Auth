@@ -1,5 +1,5 @@
 # CRUD-with-Auth
-글작성+인증(CRUD+Auth) (node.js + express + MySQL)
+글작성+인증(CRUD+Auth) (node.js/express + MySQL)
 
 ## Getting-Started
 1. Install
