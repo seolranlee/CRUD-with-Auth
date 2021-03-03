@@ -30,7 +30,7 @@
     "passport-facebook": "^2.1.1",
     "passport-local": "^1.0.0",
     "pbkdf2-password": "^1.2.1",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "session-file-store": "^1.2.0",
     "sha256": "^0.2.0",
     "supervisor": "^0.12.0",
